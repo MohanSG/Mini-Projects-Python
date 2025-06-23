@@ -9,10 +9,6 @@ dealer_value = 0
 
 suits ={'spades':'♠','hearts':'♥','diamonds':'♦','clubs':'♣'}
 
-def deal_cards():
-    keys = list(suits.keys())
-    random_key = random.choice(keys)
-
 def get_card_rank():
     rank = random.randint(1, 15)
 
@@ -23,12 +19,27 @@ def get_card_rank():
     else:
         return 'A'
     
-def deal_initial_cards():
-    for card in range(1,3):
-        random_suit = random.choice(list(suits.keys()))
-        random_card_number = get_card_rank()
-        player_cards['card1'] = random_card_number, suits[random_suit]
-    
-    return print_card(str(player_cards['card1'][0]), player_cards['card1'][1])
-    
-deal_initial_cards()
+def get_a_card(dealer_or_player):
+    random_suit = random.choice(list(suits.keys()))
+    random_card_number = get_card_rank()
+    if dealer_or_player == "player":
+        player_cards[f'card{str(len(player_cards)+1)}'] = [random_card_number, suits[random_suit]]
+    elif dealer_or_player == "dealer":
+        dealer_cards[f'card{str(len(dealer_cards)+1)}'] = [random_card_number, suits[random_suit]]
+
+
+def deal_cards():
+    for _ in range(1,3):
+        get_a_card("player")
+        get_a_card("dealer")
+
+def show_cards():
+    print("***** DEALERS CARDS*****")
+    for key in dealer_cards:
+        print_card(str(dealer_cards[key][0]), str(dealer_cards[key][1]))
+    print("***** PLAYERS CARDS*****")
+    for key in player_cards:
+        print_card(str(player_cards[key][0]), str(player_cards[key][1]))
+
+deal_cards()
+show_cards()
