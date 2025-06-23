@@ -7,6 +7,8 @@ player_value = 0
 dealer_cards = {}
 dealer_value = 0
 
+cards_dealt = False
+
 suits ={'spades':'♠','hearts':'♥','diamonds':'♦','clubs':'♣'}
 
 def get_card_rank():
@@ -41,5 +43,8 @@ def show_cards():
     for key in player_cards:
         print_card(str(player_cards[key][0]), str(player_cards[key][1]))
 
-deal_cards()
-show_cards()
+play = input("Would you like to play a game of BlackJack? y/n: ")
+if play == 'y':
+    deal_cards()
+    cards_dealt = True
+    show_cards()
