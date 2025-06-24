@@ -1,4 +1,5 @@
 from ascii_cards.cards import print_card
+from blackjack_art import art
 import random
 import os
 
@@ -77,51 +78,65 @@ def show_cards():
     print(f"Player card value: {player_value}")
 
 def main():
-    os.system('cls')
-    play = input("Would you like to play a game of BlackJack? y/n: ").lower()
-    os.system('cls')
+    global player_cards
+    global dealer_cards
+    global player_value
+    global dealer_value 
+    
+    keep_playing = True
+    while keep_playing:
+        os.system('cls')
+        print(art)
+        play = input("Would you like to play a game of BlackJack? y/n: ").lower()
+        os.system('cls')
 
-    player_choice = ''
-    game_not_ended = True
+        player_choice = ''
+        game_not_ended = True
 
-    if play == 'y':
-        deal_cards()
-        show_cards()
+        if play == 'y':
+            deal_cards()
+            show_cards()
 
-        if player_value == 21:
-            game_not_ended = False
-            print("YOU WIN") 
+            if player_value == 21:
+                game_not_ended = False
+                print("YOU WIN") 
 
-        while game_not_ended:
-            player_choice = input("Hit or Stand?: ").lower()
-            if player_choice == "hit":
-                get_a_card("player")
-                show_cards()
-                if player_value > 21:
-                    game_not_ended = False
-                    print("BUST")
-                elif player_value == 21:
-                    print("YOU WIN")
-                    game_not_ended = False
-            elif player_choice == "stand":
-                get_a_card("dealer")
-                show_cards()
-                if dealer_value > 21:
-                    game_not_ended = False
-                    print("YOU WIN")
-                elif dealer_value <= 16:
-                    while dealer_value <= 16:
-                        get_a_card("dealer")
-                        show_cards()
-                if dealer_value > 21 or player_value > dealer_value:
+            while game_not_ended:
+                player_choice = input("Hit or Stand?: ").lower()
+                if player_choice == "hit":
+                    get_a_card("player")
+                    show_cards()
+                    if player_value > 21:
+                        game_not_ended = False
+                        print("BUST")
+                    elif player_value == 21:
                         print("YOU WIN")
                         game_not_ended = False
-                elif dealer_value > player_value or dealer_value == 21:
-                        print("DEALER WINS")
+                elif player_choice == "stand":
+                    get_a_card("dealer")
+                    show_cards()
+                    if dealer_value > 21:
                         game_not_ended = False
-                elif player_value == dealer_value:
-                            print("DRAW")
+                        print("YOU WIN")
+                    elif dealer_value <= 16:
+                        while dealer_value <= 16:
+                            get_a_card("dealer")
+                            show_cards()
+                    if dealer_value > 21 or player_value > dealer_value:
+                            print("YOU WIN")
                             game_not_ended = False
+                    elif dealer_value > player_value or dealer_value == 21:
+                            print("DEALER WINS")
+                            game_not_ended = False
+                    elif player_value == dealer_value:
+                                print("DRAW")
+                                game_not_ended = False
+
+            os.system('pause')
+            player_value = 0
+            dealer_value = 0
+            player_cards = {}
+            dealer_cards = {}
 
 if __name__ == "__main__":
     main()
