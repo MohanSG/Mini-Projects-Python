@@ -1,0 +1,16 @@
+-Resources -> Dictionary
+    -Water
+    -Milk
+    -Coffee
+    -Profit
+-Espresso
+    -50ml Water
+    -18g Coffee
+-Latte
+    -200ml Water
+    -24g Coffee
+    -150ml Milk
+Cappucino
+    -250ml Water
+    -24g Coffee
+    -100ml Milk
