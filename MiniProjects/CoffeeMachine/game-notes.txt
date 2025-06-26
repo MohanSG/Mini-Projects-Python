@@ -14,3 +14,24 @@ Cappucino
     -250ml Water
     -24g Coffee
     -100ml Milk
+
+Program flow
+-Ask the user if which coffee they would like OK
+    -if user types report, show a list of resources OK
+    -if the user types off, turn off the machine OK
+-User chooses a Coffee OK
+    -check resources, if insufficient, display on screen and end OK
+-if sufficient resources, ask the user for coins OK
+    -user adds coins OK
+    -when user is finished, check to see if its enough OK
+-if there are sufficient resources and enough money has been paid OK
+    -give coffee OK 
+    -update resources list depending on resources used TODO
+    -add money to the resources list TODO
+    -if the user gave too much money, give them their change OK 
+
+1. print report
+2. check resources sufficient
+3. process coins
+4. check transaction successful?
+5. make coffee
