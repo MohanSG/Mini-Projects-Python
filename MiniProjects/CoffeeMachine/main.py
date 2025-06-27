@@ -1,4 +1,4 @@
-from data import coffee
+from data import resources, coffee
 from coffee_machine_functions import *
 
 operating = True
@@ -27,7 +27,7 @@ while operating:
                 change = calculate_change(coffee_price, user_coins_amount)
                 print(f"Here is your change: ${change}")
                 print(f"Here is your {coffee_choice}!")
-                
+                update_resources(coffee_choice, resources)
 
             else:
                 print(f"You dont have enough money")

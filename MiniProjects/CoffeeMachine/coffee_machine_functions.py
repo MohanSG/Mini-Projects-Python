@@ -36,3 +36,19 @@ def insert_coins():
 
 def calculate_change(coffee_price, coins):
     return round(coins - coffee_price, 2)
+
+def update_resources(coffee_made, resources):
+    
+    milk_used = coffee[coffee_made]['milk']
+    water_used = coffee[coffee_made]['water']
+    coffee_amount_used = coffee[coffee_made]['coffee']
+    coffee_price = coffee[coffee_made]['cost'] 
+    
+    updated_resources =  {
+        "water": resources['water'] - water_used,
+        "milk": resources['milk'] - milk_used,
+        "coffee": resources['coffee'] - coffee_amount_used,
+        "money": resources['money'] + coffee_price
+    }
+    
+    print(updated_resources)
