@@ -1,6 +1,6 @@
 from data import resources, coffee
 
-def show_report():
+def show_report(resources):
     water = resources['water']
     milk = resources['milk']
     coffee = resources['coffee']
@@ -51,4 +51,4 @@ def update_resources(coffee_made, resources):
         "money": resources['money'] + coffee_price
     }
     
-    print(updated_resources)
+    return updated_resources

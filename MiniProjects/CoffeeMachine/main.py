@@ -6,7 +6,7 @@ while operating:
     choice = input("What would you like? (espresso/latte/cappucino): ")
 
     if choice == "report":
-        show_report()
+        show_report(resources)
 
     elif choice == "off":
         print("Powering down...")
@@ -27,8 +27,8 @@ while operating:
                 change = calculate_change(coffee_price, user_coins_amount)
                 print(f"Here is your change: ${change}")
                 print(f"Here is your {coffee_choice}!")
-                update_resources(coffee_choice, resources)
-
+                resources = update_resources(coffee_choice, resources)
+                
             else:
                 print(f"You dont have enough money")
 
