@@ -15,7 +15,7 @@ while operating:
     elif choice == "espresso" or choice == "latte" or choice == "cappucino":
         coffee_choice = choice
 
-        if (check_resource(coffee_choice)):
+        if check_resource(coffee_choice, resources):
             coffee_price = coffee[coffee_choice]['cost']
             print(f"Your total is ${coffee_price}")
             user_coins_amount = insert_coins()

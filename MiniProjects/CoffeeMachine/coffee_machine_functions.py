@@ -14,7 +14,7 @@ def sufficient_user_balance(balance, price):
     else:
         True
         
-def check_resource(coffee_to_make):
+def check_resource(coffee_to_make, resources):
     coffee_choice = coffee[coffee_to_make]
 
     if coffee_choice['water'] <= resources['water'] and coffee_choice['milk'] <= resources['milk'] and coffee_choice['coffee'] <= resources['coffee']:
