@@ -26,7 +26,7 @@ Program flow
     -when user is finished, check to see if its enough OK
 -if there are sufficient resources and enough money has been paid OK
     -give coffee OK 
-    -update resources list depending on resources used TODO
+    -update resources list depending on resources used OK
     -add money to the resources list TODO
     -if the user gave too much money, give them their change OK 
 
