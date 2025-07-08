@@ -4,6 +4,7 @@ from guess_art import art
 
 random_number = random.randint(1, 100)
 guess_count = 0
+max_guesses = 0
 
 os.system('cls')
 
@@ -23,8 +24,10 @@ difficulty = input("Choose a difficulty. 'easy' or 'hard: ")
 
 if difficulty == "hard":
     guess_count = 5
+    max_guesses = 5
 elif difficulty == "easy":
     guess_count = 10
+    max_guesses = 10
 
 in_play = True
 while in_play:
@@ -33,7 +36,7 @@ while in_play:
 
     guess = int(input("Make a guess: "))
     if check(guess, random_number):
-        print(f"Congratulations! You guessed the number {random_number} in {10 - guess_count} guesses!")
+        print(f"Congratulations! You guessed the number {random_number} in {max_guesses - guess_count} guesses!")
         in_play = False
     else:
         guess_count -= 1
