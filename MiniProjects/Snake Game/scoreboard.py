@@ -7,11 +7,18 @@ class Scoreboard(Turtle):
         #self.write(f"Score: {self.score}", move=True, align="center", font=('Arial', 8, 'normal'))
         self.penup()
         self.hideturtle()
-        self.goto(0, 280)
+        self.goto(0, 270)
         self.color('white')
+        self.update_scoreboard()
+
+    def update_scoreboard(self):
         self.write(f"Score: {self.score}", False, align="center", font=('Arial', 14 , 'normal'))
     
     def increase_score(self):
         self.score += 1
         self.clear()
-        self.write(f"Score: {self.score}", False, align="center", font=('Arial', 14 , 'normal'))
+        self.update_scoreboard()
+
+    def game_over(self):
+        self.goto(0, 0)
+        self.write(f"GAME OVER", False, align="center", font=('Arial', 14 , 'normal'))

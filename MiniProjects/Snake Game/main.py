@@ -31,4 +31,13 @@ while is_playing:
         scoreboard.increase_score()
         snake.add_snake_bit()
     
+    if snake.first_bit.xcor() > 280 or snake.first_bit.xcor() < -280 or snake.first_bit.ycor() > 280 or snake.first_bit.ycor() < -280:
+        is_playing = False
+        scoreboard.game_over()
+
+    for bit in snake.snake_bits[1:]:
+        if snake.first_bit.distance(bit) < 10:
+            is_playing = False
+            scoreboard.game_over()
+
 screen.exitonclick()

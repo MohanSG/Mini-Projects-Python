@@ -26,6 +26,7 @@ class Snake:
     
     def add_snake_bit(self):
         t = Turtle("square")
+        t.goto(400, 400)
         t.penup()
         t.color("white")
         self.snake_bits.append(t)
