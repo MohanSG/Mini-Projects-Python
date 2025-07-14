@@ -1,5 +1,5 @@
 import colorgram
-from turtle import Turtle
+from turtle import Turtle, Screen
 import random
 
 colors = colorgram.extract('cool-pic.png', 100)
@@ -11,6 +11,8 @@ for color in colors:
     new_color = (r, g, b)
     colors_set.append(new_color)
 
+screen = Screen()
+screen.setup(550, 550)
 x = -240
 y = -200
 
@@ -34,4 +36,4 @@ for _ in range(100):
         t.teleport(x, y)
         x_counter = 0
         
-t.screen.mainloop()
+screen.mainloop()
