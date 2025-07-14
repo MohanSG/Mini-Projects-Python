@@ -28,5 +28,7 @@ while is_playing:
     
     if snake.first_bit.distance(food) < 15:
         food.refresh()
+        scoreboard.increase_score()
+        snake.add_snake_bit()
     
 screen.exitonclick()

@@ -24,6 +24,12 @@ class Snake:
             
         self.snake_bits[0].forward(20)
     
+    def add_snake_bit(self):
+        t = Turtle("square")
+        t.penup()
+        t.color("white")
+        self.snake_bits.append(t)
+    
     def up(self): #90
         if self.first_bit.heading() != 270:
             self.snake_bits[0].setheading(90)
