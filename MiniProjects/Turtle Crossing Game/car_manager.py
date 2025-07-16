@@ -12,19 +12,24 @@ class CarManager(Turtle):
         self.hideturtle()
         self.cars = []
         
-    def spawn_car(self):
-        random_y = random.randint(-300, 300)
+    def spawn_car(self, number_of_cars):
+        car_counter = 0
         
-        car = Turtle()
-        car.penup()
-        car.shape('square')
-        car.shapesize(stretch_len=2, stretch_wid=1)
-        car.setheading(180)
-        car.color(random.choice(COLORS))
-        car.goto(340, random_y)
-        
-        self.cars.append(car)
+        if car_counter < number_of_cars:
+            random_y = random.randint(-300, 300)
+            random_x = random.randint(300, 1000)
+            car = Turtle()
+            car.penup()
+            car.shape('square')
+            car.shapesize(stretch_len=2, stretch_wid=1)
+            car.setheading(180)
+            car.color(random.choice(COLORS))
+            car.goto(340, random_y)
+                
+            self.cars.append(car)
+            car_counter +=1
     
     def move_cars(self):
         for car in self.cars:
             car.forward(10)
+            

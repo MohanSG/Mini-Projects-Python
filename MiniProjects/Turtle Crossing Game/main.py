@@ -17,6 +17,6 @@ screen.onkeypress(player.move, "Up")
 game_is_on = True
 while game_is_on:
     time.sleep(0.1)
-    carmanager.spawn_car()
+    carmanager.spawn_car(100)
     carmanager.move_cars()
     screen.update()
