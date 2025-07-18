@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniProjects/Mile to Kilometers converter/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/Mile to Kilometers converter/main.py" afterDir="false" />
-    </list>
+    <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -83,7 +80,7 @@
       <workItem from="1752473338029" duration="164000" />
       <workItem from="1752800274239" duration="102000" />
       <workItem from="1752800391509" duration="1008000" />
-      <workItem from="1752801427419" duration="10707000" />
+      <workItem from="1752801427419" duration="11305000" />
     </task>
     <servers />
   </component>
