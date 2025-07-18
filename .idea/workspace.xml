@@ -5,12 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/MiniProjects/NATO Project/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/MiniProjects/NATO Project/nato_phonetic_alphabet.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniProjects/US States Game/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/US States Game/main.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniProjects/US States Game/missed_states.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/US States Game/missed_states.csv" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniProjects/Mile to Kilometers converter/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/Mile to Kilometers converter/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,6 +56,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\NATO Project" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects" />
+    </key>
   </component>
   <component name="RunAnythingCache">
     <option name="myCommands">
@@ -84,7 +83,7 @@
       <workItem from="1752473338029" duration="164000" />
       <workItem from="1752800274239" duration="102000" />
       <workItem from="1752800391509" duration="1008000" />
-      <workItem from="1752801427419" duration="9837000" />
+      <workItem from="1752801427419" duration="10707000" />
     </task>
     <servers />
   </component>
@@ -92,6 +91,6 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1752824281878" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/NATO Project" />
+    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1752825078297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Mile to Kilometers converter" />
   </component>
 </project>
