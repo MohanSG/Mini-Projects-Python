@@ -3,7 +3,6 @@ import pandas
 
 score = 0
 guessed_states = []
-missed_states = []
 
 screen = turtle.Screen()
 screen.title("U.S. States Game")
@@ -23,18 +22,16 @@ def check_answer(user_answer):
         if state['state'] == user_answer:
             return True
 
-def get_state_coords(answer):
+def get_state_coords(correct_answer):
     for state in states_dict:
-        if state['state'] == answer:
-            return (state['x'], state['y'])
+        if state['state'] == correct_answer:
+            return state['x'], state['y']
+    return 0,0
         
 def export_missed_states():
-    for state in all_states:
-        for guessed_state in guessed_states:
-            if state == guessed_state:
-                all_states.remove(guessed_state)
+    missing_states = [item for item in all_states if item not in guessed_states]
     
-    list_to_export = pandas.DataFrame(all_states)
+    list_to_export = pandas.DataFrame(missing_states)
     list_to_export.to_csv('missed_states.csv')
 
 
