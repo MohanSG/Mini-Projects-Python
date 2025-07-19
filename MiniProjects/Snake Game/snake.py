@@ -31,6 +31,16 @@ class Snake:
         t.color("white")
         self.snake_bits.append(t)
     
+    def reset(self):
+        for bit in self.snake_bits:
+            bit.clear()
+            bit.hideturtle()
+            
+        self.start_x = 0
+        self.snake_bits.clear()
+        self.create_snake()
+        self.first_bit = self.snake_bits[0]
+    
     def up(self): #90
         if self.first_bit.heading() != 270:
             self.snake_bits[0].setheading(90)
