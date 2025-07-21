@@ -4,7 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="" />
+    <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MiniProjects/Password Manager/PasswordGenerator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniProjects/NATO Project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/NATO Project/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniProjects/Password Manager/data.txt" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/Password Manager/data.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniProjects/Password Manager/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/Password Manager/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniProjects/PasswordGenerator.py" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,6 +38,7 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "Python.PasswordGenerator.executor": "Run",
     "Python.main.executor": "Run",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
@@ -54,6 +62,7 @@
       <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\NATO Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\Password Manager" />
       <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects" />
     </key>
   </component>
@@ -80,7 +89,7 @@
       <workItem from="1752473338029" duration="164000" />
       <workItem from="1752800274239" duration="102000" />
       <workItem from="1752800391509" duration="1008000" />
-      <workItem from="1752801427419" duration="11305000" />
+      <workItem from="1752801427419" duration="22329000" />
     </task>
     <servers />
   </component>
@@ -88,6 +97,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1752825078297" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Mile to Kilometers converter" />
+    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1753086464294" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/NATO Project" />
+    <SUITE FILE_PATH="coverage/MiniProjects$PasswordGenerator.coverage" NAME="PasswordGenerator Coverage Results" MODIFIED="1753083072901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Password Manager" />
   </component>
 </project>

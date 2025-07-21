@@ -1,13 +1,32 @@
 from tkinter import *
+from tkinter import messagebox
+import PasswordGenerator
+import pyperclip
 
 #SAVING TO A FILE
 def save_to_file():
+
     website = website_entry.get()
     email_user = email_user_entry.get()
     password = password_entry.get()
 
-    with open("data.txt", "a") as file:
-        file.writelines(f"\n{website}|{email_user}|{password}")
+    if len(website) != 0 or len(password) != 0:
+        is_okay = messagebox.askyesno('Confirmation', 'Are you sure?')
+
+        if is_okay:
+            with open("data.txt", "a") as file:
+                file.writelines(f"{website} | {email_user} | {password}\n")
+            pyperclip.copy(password)
+            website_entry.delete(0, END)
+            password_entry.delete(0, END)
+
+            messagebox.showinfo('Success', 'Password has been saved successfully')
+    else:
+        messagebox.showinfo('Invalid entry', "Your email or password field is empty. Please input an email"
+                                             " or password")
+def gen_password():
+    generated_password = PasswordGenerator.generate_password()
+    password_entry.insert(END, generated_password)
 
 
 #USER INTERFACE
@@ -39,7 +58,7 @@ password_label.grid(column=0, row=3)
 password_entry = Entry(width=25)
 password_entry.grid(column=1, row=3, ipadx=0)
 
-generate_button = Button(text="Generate", height=1)
+generate_button = Button(text="Generate", height=1, command=gen_password)
 generate_button.grid(column=2, row=3)
 
 add_button = Button(text="Add", width=30, command=save_to_file)

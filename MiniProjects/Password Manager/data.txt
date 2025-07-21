@@ -1,3 +1,9 @@
-
-hello|mohan|singh
-this|is|cat
+a website|example@email.com|password
+lool | example@email.com | pass
+valorant | example@email.com | password123
+hfjensj | example@email.com | sjdnkajd
+oidsfkjn | example@email.com | kjandkjne
+fjfndskfjn | example@email.com | fdkjnkjfs
+jdnfskjdsn | example@email.com | fkdnfkjsd
+fsdfsf | example@email.com | m5TPe4ZK6)m%8SFpY&I
+fdsfsf | example@email.com | peeword
