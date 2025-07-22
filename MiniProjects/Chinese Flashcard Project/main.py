@@ -8,11 +8,18 @@ WORD_FONT=("Ariel", 40, "bold")
 
 
 def get_words():
-    with open("data/chinese_words.csv", "r", encoding="utf-8") as file:
-        data = pandas.read_csv(file)
-        data_dict = data.to_dict(orient="records")
-        print(data_dict)
-        return data_dict
+    try:
+        with open("data/words_to_learn.csv", "r", encoding="utf-8") as file:
+            data=pandas.read_csv(file)
+            data_dict = data.to_dict(orient="records")
+            print("Using words to learn")
+            return data_dict
+    except FileNotFoundError:
+        with open("data/chinese_words.csv", "r", encoding="utf-8") as file:
+            data = pandas.read_csv(file)
+            data_dict = data.to_dict(orient="records")
+            print("Using chinese words")
+            return data_dict
 
 
 def get_new_card():
@@ -36,15 +43,21 @@ def word_learned():
     update_learned_words(random_word)
     get_new_card()
 
+def word_dont_know():
+    global timer_id
+    window.after_cancel(timer_id)
+    get_new_card()
+
 def update_learned_words(word):
         for i in range(len(words_dict)):
             if words_dict[i]["Chinese"] == word["Chinese"]:
                 words_dict.remove(words_dict[i])
                 print(words_dict)
+                break
 
         with open("data/words_to_learn.csv", "w", encoding="utf-8") as file:
             df = pandas.DataFrame(words_to_learn)
-            df.to_csv(file, index=False)
+            df.to_csv(file, index=False, lineterminator='\n')
 
 def count_down():
     global timer_id
