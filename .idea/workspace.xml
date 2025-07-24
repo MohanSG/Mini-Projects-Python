@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/MiniProjects/ISSOverhead/config.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MiniProjects/ISSOverhead/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MiniProjects/KanyeAPI/background.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MiniProjects/KanyeAPI/kanye.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/MiniProjects/KanyeAPI/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniProjects/Chinese Flashcard Project/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/Chinese Flashcard Project/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MiniProjects/Birthday Wisher/birthdays.csv" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/Birthday Wisher/birthdays.csv" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -43,7 +48,7 @@
     "database.data.extractors.current.id": "Comma-separated (CSV)_id",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Mohan/Documents/GitHub/MiniProjects/MiniProjects/NATO Project",
+    "last_opened_file_path": "C:/Users/Mohan/Documents/GitHub/MiniProjects/MiniProjects/ISSOverhead",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
@@ -55,9 +60,11 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\ISSOverhead" />
       <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\NATO Project" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\KanyeAPI" />
       <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects\Password Manager" />
       <recent name="C:\Users\Mohan\Documents\GitHub\MiniProjects\MiniProjects" />
     </key>
@@ -85,7 +92,7 @@
       <workItem from="1752473338029" duration="164000" />
       <workItem from="1752800274239" duration="102000" />
       <workItem from="1752800391509" duration="1008000" />
-      <workItem from="1752801427419" duration="37843000" />
+      <workItem from="1752801427419" duration="50379000" />
     </task>
     <servers />
   </component>
@@ -93,7 +100,7 @@
     <option name="version" value="3" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1753172184236" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Chinese Flashcard Project" />
+    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1753254098314" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/ISSOverhead" />
     <SUITE FILE_PATH="coverage/MiniProjects$PasswordGenerator.coverage" NAME="PasswordGenerator Coverage Results" MODIFIED="1753083072901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Password Manager" />
   </component>
 </project>
