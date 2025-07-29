@@ -31,8 +31,15 @@ class QuizUI:
         self.window.mainloop()
 
     def get_next_question(self):
-        next_question = self.quiz.next_question()
-        self.canvas.itemconfig(self.question_text, text=next_question)
+        self.canvas["background"] = "white"
+        if self.quiz.still_has_questions():
+            self.score_text.config(text=f"Score:{self.quiz.score}")
+            next_question = self.quiz.next_question()
+            self.canvas.itemconfig(self.question_text, text=next_question)
+        else:
+            self.canvas.itemconfig(self.question_text, text="You've reached the end of the quiz!")
+            self.true_button.config(state="disabled")
+            self.false_button.config(state="disabled")
 
     def pressed_true(self):
         self.give_feedback(self.quiz.check_answer("True"))
@@ -42,9 +49,8 @@ class QuizUI:
 
     def give_feedback(self, is_right):
         if is_right:
-            self.window.after(1000, self.flash_screen, "green")
+            self.canvas["background"] = "green"
         else:
-            self.window.after(1000, self.flash_screen, "red")
+            self.canvas["background"] = "red"
 
-    def flash_screen(self, color):
-        self.canvas["background"] = color
+        self.window.after(1000, self.get_next_question)
