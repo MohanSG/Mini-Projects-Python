@@ -5,7 +5,7 @@ from twilio.http.http_client import TwilioHttpClient
 
 
 
-account_sid = "ACc1355eb238611ba7d34dff0039898116"
+account_sid = "ACCOUNT_SID_GOES_HERE"
 auth_token = "AUTH_TOKEN_GOES_HERE"
 
 API_URL="http://api.openweathermap.org/data/2.5/forecast"
