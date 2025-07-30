@@ -2,14 +2,14 @@ import os
 import requests
 from twilio.rest import Client
 from twilio.http.http_client import TwilioHttpClient
+from dotenv import load_dotenv
 
-
-
-account_sid = "ACCOUNT_SID_GOES_HERE"
-auth_token = "AUTH_TOKEN_GOES_HERE"
+load_dotenv()
+account_sid = os.environ["TW_ACC_SID"]
+auth_token = os.environ["TW_AUTH_TOKEN"]
 
 API_URL="http://api.openweathermap.org/data/2.5/forecast"
-API_KEY = "API_KEY_GOES_HERE"
+API_KEY = os.environ["OW_API_KEY"]
 parameters = {
     "lon" : 116.407394,
     "lat": 39.904202,
@@ -23,7 +23,6 @@ response.raise_for_status()
 will_rain = False
 
 data = response.json()
-print(data)
 for forecast in data["list"]:
     for w in forecast["weather"]:
         if w["id"] < 700:
