@@ -36,6 +36,6 @@ if will_rain:
     message = client.messages.create(
         body="It's going to rain today, bring an umbrella",
         from_="+447427813105",
-        to="+447432088793",
+        to=os.environ["MOB_NUM"],
     )
     print(message.status)

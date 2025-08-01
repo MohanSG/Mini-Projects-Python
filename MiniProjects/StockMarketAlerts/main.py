@@ -3,7 +3,6 @@ from datetime import datetime, timedelta
 import requests
 from dotenv import load_dotenv
 from twilio.rest import Client
-from twilio.http.http_client import TwilioHttpClient
 
 STOCK = "TSLA"
 COMPANY_NAME = "Tesla Inc"
@@ -13,14 +12,11 @@ def send_sms(message_to_send):
     account_sid = os.environ["TW_ACC_SID"]
     auth_token = os.environ["TW_AUTH_TOKEN"]
 
-    proxy_client = TwilioHttpClient()
-    proxy_client.session.proxies = {'https': os.environ['https_proxy']}
-
-    client = Client(account_sid, auth_token, http_client=proxy_client)
+    client = Client(account_sid, auth_token)
     message = client.messages.create(
         body=message_to_send,
         from_="+447427813105",
-        to="+447432088793",
+        to=os.environ["MOB_NUM"],
     )
     print(message.status)
 
@@ -59,12 +55,12 @@ date_yesterday = (datetime.today() - timedelta(days=2)).strftime("%Y-%m-%d")
 todays_close = float(stocks_data["Time Series (Daily)"][date_today]["4. close"])
 yester_close = float(stocks_data["Time Series (Daily)"][date_yesterday]["4. close"])
 
-# perc_diff = calculate_percentage_change(todays_close, yester_close)
-perc_diff = 9.3432344
+perc_diff = calculate_percentage_change(todays_close, yester_close)
 if perc_diff > 5 or perc_diff < -5:
     message_body = None
     news = get_news(COMPANY_NAME, date_today, date_yesterday)
     top_news = {}
+
     for i in range(3):
         news_title = news["articles"][i]["title"]
         news_description = news["articles"][i]["description"]
@@ -76,7 +72,9 @@ if perc_diff > 5 or perc_diff < -5:
             message_body = f"{STOCK}: 🔺{round(perc_diff)}%\n"
         for key, value in top_news.items():
             message_body += f"Headline: {key}\nBrief:{value}\n\n"
+    print(message_body)
     send_sms(message_body)
+
 ## STEP 3: Use https://www.twilio.com
 # Send a seperate message with the percentage change and each article's title and description to your phone number. 
 
