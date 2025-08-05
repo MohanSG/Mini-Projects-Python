@@ -1,7 +1,7 @@
 from dotenv import load_dotenv
 import os
 import requests
-from datetime import datetime
+from datetime import datetime, timedelta
 
 load_dotenv()
 class FlightSearch:
@@ -48,14 +48,17 @@ class FlightSearch:
             return data['iataCode']
 
     def get_cheapest_flight_data(self, destination):
-        departure_date = datetime.today().strftime('%Y-%m-%d')
+        from_departure_date = datetime.today().strftime('%Y-%m-%d')
+        departure_date = (datetime.now() + timedelta(days=180)).strftime('%Y-%m-%d')
         cheapest_flights_endpoint = "https://test.api.amadeus.com/v2/shopping/flight-offers"
         access_token = self.get_access_token()
 
         params = {
             "originLocationCode" : "LHR",
             "destinationLocationCode" : destination,
-            "departureDate" : departure_date, 
+            "departureDate" : departure_date,
+            "adults" : 1,
+
         }
 
         headers = {
