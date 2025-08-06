@@ -43,23 +43,23 @@ class FlightSearch:
             r = response.json()
             data = r['data'][0]
         except KeyError:
-            print(r)
+            print("Error occurred when trying to get iata data (Key Error)")
         else:
             return data['iataCode']
 
-    def get_cheapest_flight_data(self, destination):
+    def get_cheapest_flight_data(self, destination, is_direct=True):
         from_departure_date = datetime.today().strftime('%Y-%m-%d')
-        to_departure_date = (datetime.now() + timedelta(days=180)).strftime('%Y-%m-%d')
+        to_departure_date = (datetime.now() + timedelta(days=14)).strftime('%Y-%m-%d')
         cheapest_flights_endpoint = "https://test.api.amadeus.com/v2/shopping/flight-offers"
         access_token = self.get_access_token()
 
-        params = {
+        direct_params = {
             "originLocationCode": "PEK",
             "destinationLocationCode": destination,
             "departureDate": from_departure_date,
             "returnDate": to_departure_date,
             "adults": 1,
-            "nonStop": "true",
+            "nonStop": "true" if is_direct else "false",
             "currencyCode": "CNY",
             "max": "10",
         }
@@ -68,6 +68,6 @@ class FlightSearch:
             "Authorization": access_token
         }
 
-        response = requests.get(url=cheapest_flights_endpoint, params=params, headers=headers)
+        response = requests.get(url=cheapest_flights_endpoint, params=direct_params, headers=headers)
         data = response.json()
         return data

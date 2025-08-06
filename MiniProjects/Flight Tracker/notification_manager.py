@@ -2,6 +2,7 @@ import os
 from flight_data import FlightData
 from dotenv import load_dotenv
 from twilio.rest import Client
+import smtplib
 
 load_dotenv()
 class NotificationManager:
@@ -21,3 +22,17 @@ class NotificationManager:
         )
 
         print(message.status)
+
+    def send_email(self, email, flight: FlightData):
+        try:
+            with (smtplib.SMTP("smtp.gmail.com", 587)) as connection:
+                connection.starttls()
+                connection.login(user=os.environ['MY_EMAIL'], password=os.environ['SMTP_PASS'])
+                connection.sendmail(
+                    from_addr=os.environ['MY_EMAIL'],
+                    to_addrs=email,
+                    msg=f"Low price alert! Only CNY{flight.price} from {flight.origin} to {flight.destination}, "
+                        f"with {flight.stops} stop(s) on {flight.out_date} and returning on {flight.return_date}"
+                )
+        except TimeoutError:
+            print(f"Connection timed out, couldn't send email to {email}")

@@ -32,3 +32,16 @@ class DataManager:
 
         response = requests.put(url=put_endpoint, json=params, headers=headers)
         print(response.text)
+
+    def get_user_emails(self):
+        get_endpoint = "https://api.sheety.co/af5eaca2b4e146a454d214ca5577ad1d/flightDeals/users"
+        headers = {
+            "Authorization": os.environ["SHEETY_API_KEY"]
+        }
+        response = requests.get(get_endpoint, headers=headers)
+        data = response.json()
+        emails = []
+        for users in data['users']:
+            emails.append(users['whatIsYourEmailAddress?'])
+
+        return emails
