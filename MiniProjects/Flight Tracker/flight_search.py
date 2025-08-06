@@ -49,16 +49,19 @@ class FlightSearch:
 
     def get_cheapest_flight_data(self, destination):
         from_departure_date = datetime.today().strftime('%Y-%m-%d')
-        departure_date = (datetime.now() + timedelta(days=180)).strftime('%Y-%m-%d')
+        to_departure_date = (datetime.now() + timedelta(days=180)).strftime('%Y-%m-%d')
         cheapest_flights_endpoint = "https://test.api.amadeus.com/v2/shopping/flight-offers"
         access_token = self.get_access_token()
 
         params = {
-            "originLocationCode" : "LHR",
-            "destinationLocationCode" : destination,
-            "departureDate" : departure_date,
-            "adults" : 1,
-
+            "originLocationCode": "PEK",
+            "destinationLocationCode": destination,
+            "departureDate": from_departure_date,
+            "returnDate": to_departure_date,
+            "adults": 1,
+            "nonStop": "true",
+            "currencyCode": "CNY",
+            "max": "10",
         }
 
         headers = {
