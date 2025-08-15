@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="a81f5a1e-8283-4557-ac63-018139c67e4f" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/MiniProjects/MusicalTimeMachine/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/MiniProjects/MusicalTimeMachine/main.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,6 +37,7 @@
     "Python.PasswordGenerator.executor": "Run",
     "Python.data.executor": "Run",
     "Python.flight_search.executor": "Run",
+    "Python.interactions.executor": "Run",
     "Python.main.executor": "Run",
     "Python.quiz_brain.executor": "Run",
     "Python.ui.executor": "Run",
@@ -97,6 +97,7 @@
       <workItem from="1752800391509" duration="1008000" />
       <workItem from="1752801427419" duration="107177000" />
       <workItem from="1754899426749" duration="24080000" />
+      <workItem from="1755218097663" duration="8933000" />
     </task>
     <servers />
   </component>
@@ -105,8 +106,9 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/MiniProjects$flight_search.coverage" NAME="flight_search Coverage Results" MODIFIED="1754279102719" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Flight Tracker" />
+    <SUITE FILE_PATH="coverage/MiniProjects$interactions.coverage" NAME="interactions Coverage Results" MODIFIED="1755246051070" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/CookieClickerProject" />
     <SUITE FILE_PATH="coverage/MiniProjects$data.coverage" NAME="data Coverage Results" MODIFIED="1753430942207" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Quizzler" />
-    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1755160426778" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/MusicalTimeMachine" />
+    <SUITE FILE_PATH="coverage/MiniProjects$main.coverage" NAME="main Coverage Results" MODIFIED="1755245470560" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/CookieClickerProject" />
     <SUITE FILE_PATH="coverage/MiniProjects$Doctests_in_adapters.coverage" NAME="Doctests in adapters Coverage Results" MODIFIED="1753430546102" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/.venv/Lib/site-packages/requests" />
     <SUITE FILE_PATH="coverage/MiniProjects$quiz_brain.coverage" NAME="quiz_brain Coverage Results" MODIFIED="1753431623365" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Quizzler" />
     <SUITE FILE_PATH="coverage/MiniProjects$PasswordGenerator.coverage" NAME="PasswordGenerator Coverage Results" MODIFIED="1753083072901" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/MiniProjects/Password Manager" />
