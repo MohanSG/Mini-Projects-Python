@@ -1,9 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
+from selenium.webdriver.common.keys import Keys
 
 driver = webdriver.Firefox()
-driver.get("https://en.wikipedia.org/")
+driver.get("https://secure-retreat-92358.herokuapp.com/")
 
-welcome_section = driver.find_elements(By.CSS_SELECTOR, "#articlecount li")
-for section in welcome_section:
-    print(section.text)
+first_name_textbox = driver.find_element(By.NAME, "fName")
+first_name_textbox.send_keys("Mohan")
+
+second_name_textbox = driver.find_element(By.NAME, "lName")
+second_name_textbox.send_keys("Singh")
+
+email_textbox = driver.find_element(By.NAME, "email")
+email_textbox.send_keys("mohansg12@gmail.com")
+
+email_textbox.send_keys(Keys.ENTER)
