@@ -1,12 +1,17 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.firefox.service import Service
+from selenium.webdriver.common.keys import Keys
+from selenium.webdriver.common.action_chains import ActionChains
 import time
 
 geckodriver_path = "C:/WebDriver/bin/geckodriver.exe"
 service = Service(executable_path = geckodriver_path)
 driver = webdriver.Firefox(service=service)
+driver.maximize_window()
 driver.get("https://ozh.github.io/cookieclicker/")
+
+actions = ActionChains(driver)
 
 def get_big_cookie():
     return driver.find_element(By.ID, "bigCookie")
@@ -18,7 +23,7 @@ def choose_product(number_of_cookies): #Loop through products and choose the mos
         price = product.text.replace(",", "")
         if int(price) < number_of_cookies:
             print(f"Buying: {product_name.text}")
-            return product
+            return product_name
 
     return None
 
@@ -36,12 +41,15 @@ def change_number_format(number_text):
     if ',' in number_text:
         new_number = int(number_text.replace(",", ""))
     else:
-        new_number = int(cookie_amount_str)
+        new_number = int(number_text)
     return new_number
 
 cookie_amount = 0
 
 time.sleep(5)#Wait for js message to go away
+actions.key_down(Keys.CONTROL).send_keys(Keys.ADD).key_up(Keys.CONTROL).perform()
+actions.key_down(Keys.CONTROL).send_keys(Keys.ADD).key_up(Keys.CONTROL).perform()
+
 big_cookie = get_big_cookie()
 
 timeout = 5
@@ -65,7 +73,6 @@ while cookie_amount < 1000000:
 
     product = choose_product(cookie_amount_int)
     if product is not None:
-        product_number = change_number_format(product.text)
         product.click()
         time.sleep(1)
     else:
