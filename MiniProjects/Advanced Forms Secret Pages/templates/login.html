@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+{% block content %}
+        <div class="container">
+		<h1>Login</h1>
+        <form method="POST" action="{{ url_for('login') }}">
+			{{ form.csrf_token }}
+			{{ form.username.label }} <br> {{ form.username(size=20) }} <br>
+			{% for err in form.username.errors %}
+				<span style="color: red">{{ err }}</span>
+			{% endfor %}
+			{{ form.password.label }} <br> {{form.password(size=20) }} <br>
+			{% for err in form.password.errors %}
+				<span style="color: red">{{ err }}</span>
+			{% endfor %}
+			{{form.submit}}
+		</form>
+        </div>
+{% endblock %}
